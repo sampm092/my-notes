@@ -1,6 +1,7 @@
-# HTML & CSS
+# Alignment Properties for CSS
 
-## Alignment Properties
+Alignment Properties menghandle spacing ketika mendesain interface website menggunakan HTML + CSS.
+Pada umumnya alignment mempengaruhi element yang menggunakan display flex dan grid.
 
 !!! question "Pertanyaan"
     Apa perbedaan :
@@ -42,8 +43,9 @@ Sementara flex-direction: column/kolom → main = vertical, cross = horizontal
 | `*-items`   | Aligns **all items inside container** |
 | `*-self`    | Aligns **one specific item**          |
 
-### Align
-#### Align-content
+## Align
+Menggunakan contoh yang diambil dari [w3school](https://www.w3schools.com/) :fontawesome-solid-copyright:
+### Align-content
 Untuk uji coba, digunakan:
 
 ```css
