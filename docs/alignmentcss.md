@@ -138,3 +138,71 @@ Untuk uji coba, digunakan:
         <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
         <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
     </div>
+
+### Align-items
+Untuk uji coba, digunakan:
+
+```css
+#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black; 
+  display: flex;
+  align-items: [yang diuji];
+}
+
+#main div {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+}
+```
+
+```html
+
+// Main
+<div id="main">
+  <div style="background-color:coral;min-height:30px;">RED</div>
+  <div style="background-color:lightblue;min-height:50px;">BLUE</div>  
+  <div style="background-color:lightgreen;min-height:190px;">Green div with more content.</div>
+</div>
+```
+=== "Start"
+    ```css
+    align-items: start;
+    ```
+    <div style="background-color:white;color:black;width: 220px;height: 300px;border: 1px solid black; display: flex;align-items: start;">
+        <div style="background-color:coral;min-height:30px;flex: 1;border: 1px solid black;display: flex;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;flex: 1;border: 1px solid black;display: flex;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;flex: 1;border: 1px solid black;display: flex;">Green div with more content.</div>
+    </div>
+
+=== "Center"
+    ```css
+    align-items: center;
+    ```
+    <div style="background-color:white;color:black;width: 220px;height: 300px;border: 1px solid black; display: flex;align-items: center;">
+        <div style="background-color:coral;min-height:30px;flex: 1;border: 1px solid black;display: flex;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;flex: 1;border: 1px solid black;display: flex;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;flex: 1;border: 1px solid black;display: flex;">Green div with more content.</div>
+    </div>
+
+=== "End"
+    ```css
+    align-items: end;
+    ```
+    <div style="background-color:white;color:black;width: 220px;height: 300px;border: 1px solid black; display: flex;align-items: end;">
+        <div style="background-color:coral;min-height:30px;flex: 1;border: 1px solid black;display: flex;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;flex: 1;border: 1px solid black;display: flex;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;flex: 1;border: 1px solid black;display: flex;">Green div with more content.</div>
+    </div>
+
+=== "Stretch"
+    ```css
+    align-items: stretch;
+    ```
+    <div style="background-color:white;color:black;width: 220px;height: 300px;border: 1px solid black; display: flex;align-items: stretch;">
+        <div style="background-color:coral;min-height:30px;flex: 1;border: 1px solid black;display: flex;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;flex: 1;border: 1px solid black;display: flex;">BLUE</div>  
+        <div style="background-color:lightgreen;min-height:190px;flex: 1;border: 1px solid black;display: flex;">Green div with more content.</div>
+    </div>
