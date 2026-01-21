@@ -2,24 +2,21 @@
 
 Template basic MKDocs yang didapat dari [sini](https://jameswillett.dev/getting-started-with-material-for-mkdocs/)
 
-## Generic Content
+## Admonition
 
-=== "Plain text"
+!!! note "Title of the callout"
 
-    This is some plain text
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 
-=== "Unordered list"
+Collapsible callout:
 
-    * First item
-    * Second item
-    * Third item
+??? info "Collapsible callout"
 
-=== "Ordered list"
-
-    1. First item
-    2. Second item
-    3. Third item
-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 
 ## Code Blocks in Content Tabs
 
@@ -46,25 +43,29 @@ Template basic MKDocs yang didapat dari [sini](https://jameswillett.dev/getting-
 ## Code Examples
 
 ### Function to add two numbers
+
 def add_two_numbers(num1, num2):
-    return num1 + num2
+return num1 + num2
 
 ### Example usage
+
 result = add_two_numbers(5, 3)
 print('The sum is:', result)
 
-## Admonition
+## Generic Content
 
-!!! note "Title of the callout"
+=== "Plain text"
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+    This is some plain text
 
-Collapsible callout:
+=== "Unordered list"
 
-??? info "Collapsible callout"
+    * First item
+    * Second item
+    * Third item
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+=== "Ordered list"
+
+    1. First item
+    2. Second item
+    3. Third item
