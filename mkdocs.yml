@@ -30,6 +30,9 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -59,3 +62,5 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/
 copyright: Copyright &copy; 2026 Samuel P.M.
+plugins:
+  - glightbox
