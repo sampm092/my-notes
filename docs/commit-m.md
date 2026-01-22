@@ -157,3 +157,31 @@ build(webpack): upgrade ke Webpack 5 untuk better tree-shaking
 
 Reduces bundle size by ~15%
 ```
+
+## Huh?
+!!! question "Pertanyaan"
+    Apa maksudnya Resolves #45, Fixes #78, Ref #12, Closes #33, Improves #90, dan Related to #56 pada footer?
+
+Angka-angka yang ada di samping \# merupakan **issue tracker**. <br>
+Misalnya **Resolves \#45**. Resolves berarti menyelesaikan atau mengatasi, sementara \#45 artinya issue atau masalah nomor 45. Jadi dapat disimpulkan footer yang diberikan pada commit message tersebut berarti issue nomor 45 telah diatasi pada commit ini.
+
+Contoh dari kasus tersebut:
+```
+# Issue #45: "Login page shows error for valid passwords"
+# Seseorang membuat commit:
+```
+```
+git commit -m "fix(login): perbaiki validasi password
+
+- Perbaiki regex validation yang salah
+- Tambah test case untuk special characters
+
+Fixes #45"
+```
+
+
+Setelah push & merge → Issue #45 otomatis:
+<ol> 1. Status berubah menjadi "Closed" </ol>
+<ol> 2. Muncul komentar: "Closed by commit abc123" </ol>
+<ol> 3. Label mungkin ditambahkan "bug-fixed" </ol>
+
