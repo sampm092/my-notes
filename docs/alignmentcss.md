@@ -33,12 +33,12 @@ Yang mempengaruhi cross axis → align-\*
 
 Jika flex-direction: row/baris, maka main = horizontal dan cross = vertical  <br>
 <figure markdown="span">
-  ![Image title](/assets/flex-row.webp)
+  ![Image title](assets/flex-row.webp)
 </figure>
 <!-- <img src="assets/flex-row.webp"> <br> -->
 Sementara jika flex-direction: column/kolom, maka main = vertical dan cross = horizontal <br>
 <figure markdown="span">
-  ![Image title](/assets/flex-col.webp)
+  ![Image title](assets/flex-col.webp)
 </figure>
 
 2️⃣ Who is being aligned?
