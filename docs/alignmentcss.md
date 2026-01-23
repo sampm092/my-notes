@@ -294,3 +294,106 @@ Untuk uji coba dilakukan pada satu div saja, kode yang digunakan:
         <div style="background-color:lightblue;flex: 1;align-self: stretch;" id="myBlueDiv">THIS</div>  
         <div style="background-color:lightgreen;flex: 1;">Green div with more content.</div>
     </div>  
+
+## Justify
+### Justtify-content
+Justify-content adalah properti CSS yang mengatur bagaimana flex items didistribusikan secara horizontal di dalam flex container (pada sumbu main axis).
+
+Fungsi Utama:
+<li> Mengatur distribusi ruang antar items pada sumbu utama (main axis)</li>
+<li> Mengontrol penjajaran horizontal items dalam flex container</li>
+<li> Mengatur bagaimana sisa ruang (extra space) didistribusikan</li>
+
+Untuk uji coba dilakukan pada satu div saja, kode yang digunakan:
+
+```css
+#main {
+  width: 400px;
+  height: 100px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  justify-content: [yang diuji];
+}
+
+#main div {
+  width: 70px;
+  height: 70px;
+  border:1px solid black
+}
+```
+
+```html
+<div id="main">
+  <div style="background-color:coral;">1</div>
+  <div style="background-color:lightblue;">2</div>
+  <div style="background-color:pink;">3</div>
+</div>
+
+```
+
+
+=== "Start"
+    ```css
+    justify-content: start;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: start;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
+
+=== "Center"
+    ```css
+    justify-content: center;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: center;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
+
+=== "End"
+    ```css
+    justify-content: end;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: end;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
+
+=== "Space-Between"
+    ```css
+    justify-content: space-between;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: space-between;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
+
+=== "Space-Around"
+    ```css
+    justify-content: space-around;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: space-around;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
+
+=== "Space-Evenly"
+    ```css
+    justify-content: space-evenly;
+    ```
+    <div style="width: 400px;height: 100px;border: 1px solid #c3c3c3;display: flex;flex-wrap: wrap;
+    justify-content: space-evenly;background-color:white">
+        <div style="background-color:coral; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
+        <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
+    </div>
