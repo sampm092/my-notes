@@ -397,3 +397,79 @@ Untuk uji coba dilakukan pada satu div saja, kode yang digunakan:
         <div style="background-color:lightblue; width: 70px;height: 70px;border:1px solid black"></div>
         <div style="background-color:pink; width: 70px;height: 70px;border:1px solid black"></div>
     </div>
+
+### Justify-items
+Justify-items adalah properti CSS yang TIDAK bekerja pada Flexbox, melainkan digunakan pada Grid Layout (CSS Grid).
+
+Fungsi Utama:
+<li> Mengatur penjajaran grid items di dalam sel gridnya pada sumbu inline (horizontal)</li>
+<li> Diterapkan pada grid container</li>
+<li> Hanya bekerja dengan CSS Grid, bukan Flexbox</li>
+
+Untuk uji coba, akan digunakan kode berikut:
+```css
+#myDIV {
+  height: 300px;
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: [yang diuji];
+  
+}
+
+#myDIV div {
+  height: 90%;
+  border: 1px solid black;
+}
+```
+```html
+<div id="myDIV">
+  <div style='background-color:coral;'>Red grid </div>
+  <div style='background-color:lightblue;'>Blue grid item</div>
+  <div style='background-color:pink;'>Pink grid item abcscbsajbjabc</div>
+  <div style='background-color:grey;'>Pink grid item</div>
+</div>
+```
+
+=== "Start"
+    ```css
+    justify-items: start; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: start;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
+
+=== "Center"
+    ```css
+    justify-items: center; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: center;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
+
+=== "End"
+    ```css
+    justify-items: end; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: end;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
+=== "Stretch"
+    ```css
+    justify-items: stretch; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: stretch;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
