@@ -1,4 +1,4 @@
-# Pedoman Commit Message
+# Pedoman commit message
 
 **Commit message** adalah pesan atau deskripsi yang menjelaskan perubahan kode yang dilakukan dalam sebuah commit pada sistem version control seperti Git. Pesan ini berfungsi sebagai dokumentasi untuk melacak riwayat perubahan dalam proyek.
 

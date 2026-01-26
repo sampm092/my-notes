@@ -1,4 +1,4 @@
-# Alignment Properties for CSS
+# Alignment properties for CSS
 
 Alignment Properties menghandle spacing ketika mendesain interface website menggunakan HTML + CSS.
 Pada umumnya alignment mempengaruhi element yang menggunakan display flex dan grid.
