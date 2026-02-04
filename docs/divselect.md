@@ -3,11 +3,11 @@
 ## First Div
 
 !!! question "Pertanyaan"
-How to select the first div in a class with css?
+    How to select the first div in a class with css?
 
 You can select the first **div** inside a class using the CSS pseudo-class **_:first-of-type_** or **_:first-child_**, depending on what exactly you need.
 
-### Case 1:
+### Case 1: First-of-type
 
 Select the first <_div_> inside an element with a certain class
 
@@ -45,7 +45,7 @@ Result:
   <div>This div won’t</div>
 </div>
 
-### Case 2:
+### Case 2: First-child
 
 Select the first child only if it’s a <_div_>
 
@@ -105,3 +105,68 @@ Result:
         <div>Second div</div>
     </div>
 </section>
+
+### Case 3: .DivName:first-of-type
+Select the first .myDiv among multiple with the same class
+
+If you have multiple elements with the same class and you want only the first one:
+``` css
+.myDiv:first-of-type {
+  background-color: pink;
+}
+```
+…but note: this works only if all .myDiv elements are the same type (e.g., all <*div*>).
+If you want literally the first .myDiv regardless of type, you can’t do that purely in CSS — you’d need JavaScript for that.
+
+**Example** <br>
+We'll use:
+``` html
+<section>
+  <div class="myDiv">FIRST .myDiv (this one is selected)</div>
+  <div class="myDiv">Second .myDiv</div>
+  <div class="myDiv">Third .myDiv</div>
+</section>
+```
+```css
+.myDiv:first-of-type {
+  background-color: gold;
+  padding: 10px;
+}
+```
+
+Result:
+<section style="border: 1px solid green"> 
+<style>
+  .myDiv:first-of-type {
+    background-color: gold;
+    padding: 10px;
+  }
+</style>
+  <div class="myDiv">FIRST .myDiv (this one is selected)</div>
+  <div class="myDiv">Second .myDiv</div>
+  <div class="myDiv">Third .myDiv</div>
+</section>
+
+!!! info "Why this works?"
+    ***:first-of-type*** means “first element of this tag type” <br>
+    All ***.myDiv*** elements are <*div*> <br>
+    So the first <*div*> that also has ***.myDiv*** gets selected <br>
+    Result: only the first ***.myDiv*** is styled.
+
+But remember...
+!!! danger "Important limitation (VERY COMMON CONFUSION)"
+    If there’s another <*div*> before it, this will NOT work:
+    ``` html
+    <section>
+        <div>I'm a div but NOT .myDiv</div>
+        <div class="myDiv">❌ This will NOT be selected</div>
+        <div class="myDiv">Second .myDiv</div>
+    </section>
+    ```
+
+
+Why?
+Because ***:first-of-type*** sees that the first <*div*> already exists — even without the class. <br>
+There is NO pure CSS selector for: <br>
+“Select the first element with class ***.myDiv*** regardless of tag or siblings” <br>
+CSS simply can’t do that yet.
