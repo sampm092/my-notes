@@ -32,7 +32,7 @@ container div:first-of-type {
 ```html
 <div class="container">
   <p>Paragraph</p>
-  <div>✅ This div will be selected</div>
+  <div>This div will be selected</div>
   <div>This div won’t</div>
 </div>
 ```
@@ -82,7 +82,7 @@ Result:
     }
     </style>
     <div class="container" style="border: 1px solid green">
-    <div>✅ This div will be selected</div>
+    <div>This div will be selected</div>
     <div>This one won’t</div>
     </div>
 </section>
@@ -154,12 +154,12 @@ Result:
     Result: only the first ***.myDiv*** is styled.
 
 But remember...
-!!! danger "Important limitation (VERY COMMON CONFUSION)"
+!!! warning "Important limitation (VERY COMMON CONFUSION)"
     If there’s another <*div*> before it, this will NOT work:
     ``` html
     <section>
         <div>I'm a div but NOT .myDiv</div>
-        <div class="myDiv">❌ This will NOT be selected</div>
+        <div class="myDiv">This will NOT be selected</div>
         <div class="myDiv">Second .myDiv</div>
     </section>
     ```
@@ -170,3 +170,75 @@ Because ***:first-of-type*** sees that the first <*div*> already exists — even
 There is NO pure CSS selector for: <br>
 “Select the first element with class ***.myDiv*** regardless of tag or siblings” <br>
 CSS simply can’t do that yet.
+
+## Nth-of-type
+You can use ***:nth-of-type()*** to select the first, second, third, or any numbered element of a given type.
+
+**Example** <br>
+We'll use example from [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type):
+``` html
+<div>
+  <div>This element isn't counted.</div>
+  <p>1st paragraph.</p>
+  <p class="fancy">2nd paragraph.</p>
+  <div>This element isn't counted.</div>
+  <p class="fancy">3rd paragraph.</p>
+  <p>4th paragraph.</p>
+</div>
+```
+``` css
+/* Odd paragraphs */
+p:nth-of-type(2n + 1) {
+  color: red;
+}
+
+/* Even paragraphs */
+p:nth-of-type(2n) {
+  color: blue;
+}
+
+/* First paragraph */
+p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+/* This will match the 3rd paragraph as it will match elements which are 2n+1 AND have a class of fancy.
+The second paragraph has a class of fancy but is not matched as it is not :nth-of-type(2n+1) */
+p.fancy:nth-of-type(2n + 1) {
+  text-decoration: underline;
+}
+```
+
+Result:
+<body>
+  <style>
+    .container2{
+      background-color: #fff;
+      color: #000;
+    }
+
+    .container2 p:nth-of-type(2n + 1) {
+      color: red;
+    }
+
+    .container2 p:nth-of-type(2n) {
+      color: blue;
+    }
+
+    .container2 p:nth-of-type(1) {
+      font-weight: bold;
+    }
+
+    .container2 p.fancy:nth-of-type(2n + 1) {
+      text-decoration: underline;
+    }
+  </style>
+  <div class="container2">
+    <div>This element isn't counted.</div>
+    <p>1st paragraph.</p>
+    <p class="fancy">2nd paragraph.</p>
+    <div>This element isn't counted.</div>
+    <p class="fancy">3rd paragraph.</p>
+    <p>4th paragraph.</p>
+  </div>
+</body>
