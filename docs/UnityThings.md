@@ -4,16 +4,44 @@
 
 Apa itu Abstract Class yang ada pada :
 ```c#
-    public abstract class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 ```
 
 Artinya <br>
-<ul>abstract → You cannot attach this directly to a GameObject. </ul>
-<ul>It is meant to be inherited. </ul>
-<ul>Other scripts will extend it. </ul>
+<li>Abstract → Kelas yang tidak dapat ditempel pada sebuah game objek unity</li>
+<li>Kelas ini tujuannya untuk diwariskan oleh kelas lain</li>
+<li>Kelas lain menjadi perpanjangan tangan kelas abstrak, seperti Interactable </li>
 
-PART 1 — Logic Behind Interactable
-Core Idea:
+## Logic Behind Interactable
+We got this Interactable.cs for a basic FPS 3D game:
+```c#
+public abstract class Interactable : MonoBehaviour
+{
+    // Pesan muncul jika object yg dituju memiliki tag 'Interactable'
+    public string promptMessage;
+
+    // If true → use Unity Events system
+    // If false → only use code override
+    public bool useEvents;
+
+    public void baseInteract()
+    {
+        //jika ada assigned function dari editor, maka lakukan itu
+        if (useEvents)
+        {
+            // perform a behaviour based on assigned function
+            GetComponent<InteractionEvent>().OnInteract.Invoke(); 
+        }
+        // jika tidak ada maka gunakan function yang ada pada extended script 
+        // yang di-attach pada interactable object
+        Interact(); //inherited function from extended script
+    }
+
+    //use virtual void because can be overridden
+    protected virtual void Interact() { } 
+}
+```
+
 
 Create a universal interaction entry point.
 
