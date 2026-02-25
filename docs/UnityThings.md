@@ -42,21 +42,23 @@ public abstract class Interactable : MonoBehaviour
 }
 ```
 
+!!! question "Apa ini??"    
+Interactable.cs adalah sebuah kelas abstrak yang bisa ditemukan pada sebuah projek game 3D unity. Kelas ini biasa digunakan sebagai basis kelas untuk semua objek yang interactable pada game unity. Misalnya pintu, NPC, karakter lawan, dan lain-lain.
 
 Create a universal interaction entry point.
 
 Instead of writing:
 
+```
 if (object is Door) { ... }
 if (object is Chest) { ... }
 if (object is Keypad) { ... }
-
+```
 
 You just do:
-
+```
 hit.GetComponent<Interactable>().baseInteract();
-
-
+```
 And polymorphism handles the rest.
 
 The Interaction Flow
