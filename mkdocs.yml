@@ -65,3 +65,5 @@ extra:
 copyright: Copyright &copy; 2026 Samuel P.M.
 plugins:
   - glightbox
+  - search
+      
