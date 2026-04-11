@@ -473,3 +473,99 @@ Untuk uji coba, akan digunakan kode berikut:
         <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
         <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
     </div>
+
+### Justify-self
+Justify-self adalah properti CSS yang mengatur penjajaran sebuah item individual di dalam sel gridnya pada sumbu inline (horizontal untuk text direction Left to Right).
+
+Fungsi Utama:
+<li>Meng-override nilai justify-items dari grid container </li>
+<li>Diterapkan pada grid item (bukan container) </li>
+<li>Hanya bekerja pada CSS Grid, bukan Flexbox </li>
+
+Untuk uji coba, akan digunakan kode berikut:
+```css
+#container {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#container .a{
+  width: 100%;
+  border: 1px solid black;
+}
+
+.a div{
+	height: 100%;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 60%;
+  justify-self: start;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: coral;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.green {
+  background-color: lightgreen;
+  border: 1px solid black;
+  width: 70%;
+}
+```
+
+```html
+<div id="container">
+  <div class="a"><div class="red">RED</div></div>
+  <div class="a"><div class="blue">BLUE<br>justify-self: right</div> </div> 
+  <div class="a"><div class="green">GREEN</div>
+</div></div>
+```
+
+=== "Start"
+    ```css
+    justify-items: start; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: start;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+    </div>
+
+=== "Center"
+    ```css
+    justify-items: center; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: center;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
+
+=== "End"
+    ```css
+    justify-items: end; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: end;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
+=== "Stretch"
+    ```css
+    justify-items: stretch; 
+    ```
+    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: stretch;">
+        <div style='background-color:coral; border:1px solid black'>Red grid </div>
+        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
+        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    </div>
