@@ -522,50 +522,63 @@ Untuk uji coba, akan digunakan kode berikut:
 
 ```html
 <div id="container">
-  <div class="a"><div class="red">RED</div></div>
-  <div class="a"><div class="blue">BLUE<br>justify-self: right</div> </div> 
-  <div class="a"><div class="green">GREEN</div>
-</div></div>
+    <div class="a">
+        <div class="red">RED</div>
+    </div>
+    <div class="a">
+        <div class="blue">BLUE<br>justify-self</div> 
+    </div> 
+    <div class="a">
+        <div class="green">GREEN</div>
+    </div>
+</div>
 ```
 
 === "Start"
     ```css
-    justify-items: start; 
+    justify-self: start; 
     ```
-    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: start;">
-        <div style='background-color:coral; border:1px solid black'>Red grid </div>
-        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
-        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
+    <div id="container" style="width: 100%;aspect-ratio: 2/1;display: grid;grid-template-columns: 1fr 1fr 1fr;background-color: #fff;">
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="red" style="height: 100%;background-color: coral;border: 1px solid black;  width: 80%;">RED</div>
+        </div>
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="blue" style="height: 100%;background-color: lightblue;width: 60%;justify-self: start;border: 1px solid black;">BLUE<br>justify-self</div> 
+        </div> 
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="green" style="height: 100%;background-color: lightgreen;border: 1px solid black;width: 70%;">GREEN</div>
+        </div>
     </div>
 
 === "Center"
     ```css
-    justify-items: center; 
+    justify-self: center; 
     ```
-    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: center;">
-        <div style='background-color:coral; border:1px solid black'>Red grid </div>
-        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
-        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
-        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    <div id="container" style="width: 100%;aspect-ratio: 2/1;display: grid;grid-template-columns: 1fr 1fr 1fr;background-color: #fff;">
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="red" style="height: 100%;background-color: coral;border: 1px solid black;  width: 80%;">RED</div>
+        </div>
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="blue" style="height: 100%;background-color: lightblue;width: 60%;justify-self: center;border: 1px solid black;">BLUE<br>justify-self</div> 
+        </div> 
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="green" style="height: 100%;background-color: lightgreen;border: 1px solid black;width: 70%;">GREEN</div>
+        </div>
     </div>
 
 === "End"
     ```css
-    justify-items: end; 
+    justify-self: end; 
     ```
-    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: end;">
-        <div style='background-color:coral; border:1px solid black'>Red grid </div>
-        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
-        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
-        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
+    <div id="container" style="width: 100%;aspect-ratio: 2/1;display: grid;grid-template-columns: 1fr 1fr 1fr;background-color: #fff;">
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="red" style="height: 100%;background-color: coral;border: 1px solid black;  width: 80%;">RED</div>
+        </div>
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="blue" style="height: 100%;background-color: lightblue;width: 60%;justify-self: end;border: 1px solid black;">BLUE<br>justify-self</div> 
+        </div> 
+        <div class="a" style="width: 100%; border: 1px solid black;">
+            <div class="green" style="height: 100%;background-color: lightgreen;border: 1px solid black;width: 70%;">GREEN</div>
+        </div>
     </div>
-=== "Stretch"
-    ```css
-    justify-items: stretch; 
-    ```
-    <div style="height: 300px;background-color: #FFFFFF;display: grid;grid-template-columns: 1fr 1fr;justify-items: stretch;">
-        <div style='background-color:coral; border:1px solid black'>Red grid </div>
-        <div style='background-color:lightblue; border:1px solid black'>Blue grid item</div>
-        <div style='background-color:pink; border:1px solid black'>Pink grid item abcscbsajbjabc</div>
-        <div style='background-color:grey; border:1px solid black'>Pink grid item</div>
-    </div>
+
