@@ -1,0 +1,31 @@
+Microsoft Excel
+ adalah program perangkat lunak pengolah angka berbasis spreadsheet (lembar kerja) yang dikembangkan oleh Microsoft. Aplikasi ini memungkinkan Anda untuk menyimpan, mengatur, menghitung, dan menganalisis data numerik menggunakan sistem grid baris dan kolom.
+
+Fungsi Utama:
+Pengolahan Data Otomatis: 
+Manajemen dan Analisis Data: 
+Pembuatan Laporan dan Anggaran: 
+Visualisasi Data: 
+Otomatisasi Tugas Berulang: 
+
+Merge Cell
+Berfungsi untuk menggabungkan cells pada microsoft excel.
+1. Blok cell yang ingin digabungkan
+2. Pada menu Home bagian Alignment, pilih Merge & center
+3.Klik tombol tersebut dan akan terlihat bahwa cell yang ingin digabungkan sudah berhasil bergabung
+
+Fungsi Average
+digunakan untuk mencari nilai rata-rata dari sekelompok cell yang berupa angka
+1. Siapkan suatu kelompok data terlebih dahulu
+2. Ketik '=AVERAGE' di suatu cell di luar kelompok data tersebut, lalu sorot kelompok cell yang ingin dicari nilai rata-ratanya.
+3. Tekan enter, maka nilai rata-rata akan muncul.
+
+Microsoft Power Point
+adalah program perangkat lunak presentasi yang dikembangkan oleh Microsoft.
+
+Fungsi Utama
+Media Penyampaian Ide: 
+Pembuatan Materi Visual: 
+Pengaturan Animasi & Transisi: 
+Penyusunan Bahan Ajar: 
+Pembuatan Media Interaktif: 
