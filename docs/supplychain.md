@@ -1,4 +1,4 @@
-# Jangan CUma Excel
+# Jangan Cuma Excel
 WHAT ARE THEY?
 
 ** 𝐄𝐱𝐜𝐞𝐥 📊 → belajar Pivot Table, XLOOKUP semua tu. Practice guna data dummy inventory/boleh downlod je online excel template.
