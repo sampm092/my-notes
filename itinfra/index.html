@@ -1,0 +1,1592 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sitename.example/itinfra/">
+      
+      
+        <link rel="prev" href="../gamedesign/">
+      
+      
+        <link rel="next" href="../supplychain/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logoGrey.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>IT Service Analysis and Performance Management - Sam's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Plus Jakarta Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#it-service-analysis-and-performance-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Sam's Notes" class="md-header__button md-logo" aria-label="Sam's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 157.5C0 88.2 56.2 32 125.5 32H272c17.7 0 32 14.3 32 32s-14.3 32-32 32H125.5c-34 0-61.5 27.5-61.5 61.5 0 31 23.1 57.2 53.9 61l92.2 11.5c62.8 7.9 109.9 61.2 109.9 124.5 0 69.3-56.2 125.5-125.5 125.5H48c-17.7 0-32-14.3-32-32s14.3-32 32-32h146.5c34 0 61.5-27.5 61.5-61.5 0-31-23.1-57.2-53.9-61L109.9 282C47.1 274.1 0 220.8 0 157.5"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sam's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IT Service Analysis and Performance Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple" aria-label="Dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange" aria-label="Light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Sam's Notes" class="md-nav__button md-logo" aria-label="Sam's Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 157.5C0 88.2 56.2 32 125.5 32H272c17.7 0 32 14.3 32 32s-14.3 32-32 32H125.5c-34 0-61.5 27.5-61.5 61.5 0 31 23.1 57.2 53.9 61l92.2 11.5c62.8 7.9 109.9 61.2 109.9 124.5 0 69.3-56.2 125.5-125.5 125.5H48c-17.7 0-32-14.3-32-32s14.3-32 32-32h146.5c34 0 61.5-27.5 61.5-61.5 0-31-23.1-57.2-53.9-61L109.9 282C47.1 274.1 0 220.8 0 157.5"></path></svg>
+
+    </a>
+    Sam's Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI For Everyone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alignmentcss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alignment properties for CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ascii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnewrepo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit-m/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedoman commit message
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selecting Div
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamedesign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IT Service Analysis and Performance Management
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IT Service Analysis and Performance Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pendahuluan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pendahuluan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-focus-areas-materi-utama-yang-diuji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Focus Areas (Materi Utama yang Diuji)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-umum-penilaian-teknis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format Umum Penilaian Teknis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategi-panduan-persiapan-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategi &amp; Panduan Persiapan Step-by-Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sla-service-level-agreement-ola-operational-level-agreement-dan-uc-underpinning-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLA (Service Level Agreement), OLA (Operational Level Agreement), dan UC (Underpinning Contract)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SLA (Service Level Agreement), OLA (Operational Level Agreement), dan UC (Underpinning Contract)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabel-perbedaan-sla-ola-dan-uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabel Perbedaan SLA, OLA, dan UC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analogi-sederhana-restoran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analogi Sederhana: Restoran
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagaimana-ketiganya-saling-menopang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bagaimana Ketiganya Saling Menopang?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management-problem-management-change-management-dan-request-fulfillment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incident Management, Problem Management, Change Management, dan Request Fulfillment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Management, Problem Management, Change Management, dan Request Fulfillment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incident-management-penanganan-cepat-firefighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incident Management (Penanganan Cepat / Firefighting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-management-analisis-akar-masalah-rca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Management (Analisis Akar Masalah / RCA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-management-pengelolaan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Management (Pengelolaan Perubahan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-fulfillment-pemenuhan-permintaan-standar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Fulfillment (Pemenuhan Permintaan Standar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rangkuman-perbandingan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rangkuman Perbandingan Singkat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mttr-mtbf-fcr-dan-service-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MTTR, MTBF, FCR, dan Service Availability (%)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MTTR, MTBF, FCR, dan Service Availability (%)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriks-pengertian-fokus-metrik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriks Pengertian &amp; Fokus Metrik
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peta-korelasi-antar-indikator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peta Korelasi Antar-Indikator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Peta Korelasi Antar-Indikator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-hubungan-matematika-mttr-mtbf-service-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Hubungan Matematika: MTTR + MTBF -&gt; Service Availability (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-hubungan-operasional-fcr-mttr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Hubungan Operasional: FCR -&gt; MTTR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efek-domino-dalam-manajemen-layanan-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efek Domino dalam Manajemen Layanan IT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplychain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jangan Cuma Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unitything/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity Things
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pendahuluan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pendahuluan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-focus-areas-materi-utama-yang-diuji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Focus Areas (Materi Utama yang Diuji)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-umum-penilaian-teknis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format Umum Penilaian Teknis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategi-panduan-persiapan-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategi &amp; Panduan Persiapan Step-by-Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sla-service-level-agreement-ola-operational-level-agreement-dan-uc-underpinning-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLA (Service Level Agreement), OLA (Operational Level Agreement), dan UC (Underpinning Contract)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SLA (Service Level Agreement), OLA (Operational Level Agreement), dan UC (Underpinning Contract)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabel-perbedaan-sla-ola-dan-uc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabel Perbedaan SLA, OLA, dan UC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analogi-sederhana-restoran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analogi Sederhana: Restoran
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bagaimana-ketiganya-saling-menopang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bagaimana Ketiganya Saling Menopang?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-management-problem-management-change-management-dan-request-fulfillment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incident Management, Problem Management, Change Management, dan Request Fulfillment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident Management, Problem Management, Change Management, dan Request Fulfillment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incident-management-penanganan-cepat-firefighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incident Management (Penanganan Cepat / Firefighting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-management-analisis-akar-masalah-rca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Management (Analisis Akar Masalah / RCA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-management-pengelolaan-perubahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Management (Pengelolaan Perubahan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-fulfillment-pemenuhan-permintaan-standar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Fulfillment (Pemenuhan Permintaan Standar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rangkuman-perbandingan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rangkuman Perbandingan Singkat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mttr-mtbf-fcr-dan-service-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MTTR, MTBF, FCR, dan Service Availability (%)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MTTR, MTBF, FCR, dan Service Availability (%)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriks-pengertian-fokus-metrik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matriks Pengertian &amp; Fokus Metrik
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peta-korelasi-antar-indikator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peta Korelasi Antar-Indikator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Peta Korelasi Antar-Indikator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-hubungan-matematika-mttr-mtbf-service-availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Hubungan Matematika: MTTR + MTBF -&gt; Service Availability (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-hubungan-operasional-fcr-mttr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Hubungan Operasional: FCR -&gt; MTTR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efek-domino-dalam-manajemen-layanan-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efek Domino dalam Manajemen Layanan IT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="it-service-analysis-and-performance-management">IT Service Analysis and Performance Management</h1>
+<p>Penilaian teknis (<em>Technical Assessment</em>) untuk posisi <strong>TEC Associate – IT Service Analysis and Performance Management</strong> umumnya menguji gabungan antara fondasi kerangka kerja manajemen layanan IT (ITSM), kemampuan analisis data/kinerja, logika pemecahan masalah (incident/problem management), dan keterampilan komunikasi bisnis.</p>
+<hr>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<h3 id="core-focus-areas-materi-utama-yang-diuji"><strong>Core Focus Areas (Materi Utama yang Diuji)</strong></h3>
+<ol>
+<li><strong>IT Service Management (ITSM) &amp; Framework ITIL</strong></li>
+<li><strong>Service Level Management:</strong> Pemahaman mendalam tentang perbedaan SLA (<em>Service Level Agreement</em>), OLA (<em>Operational Level Agreement</em>), dan UC (<em>Underpinning Contract</em>).</li>
+<li><strong>Core Lifecycle Processes:</strong> Cara menangani <em>Incident Management</em> (penanganan cepat), <em>Problem Management</em> (analisis akar masalah/RCA), <em>Change Management</em>, dan <em>Request Fulfillment</em>.</li>
+<li>
+<p><strong>Metrics &amp; KPIs:</strong> Memahami korelasi indikator kinerja seperti <em>MTTR</em> (Mean Time to Repair), <em>MTBF</em> (Mean Time Between Failures), <em>First Contact Resolution</em> (FCR), dan <em>Service Availability (%)</em>.</p>
+</li>
+<li>
+<p><strong>Performance Management &amp; Data Analytics</strong></p>
+</li>
+<li><strong>Analisis Tren Kinerja:</strong> Membaca data metrik sistem/layanan, mengidentifikasi <em>bottleneck</em>, serta mendeteksi penurunan performa sebelum terjadi insiden fatal.</li>
+<li><strong>Pemrosesan Data:</strong> Penggunaan fungsi <em>spreadsheet</em> (Excel: PivotTable, VLOOKUP/XLOOKUP, kondisional logic) atau SQL dasar untuk memfilter data <em>log</em> / tiket insiden.</li>
+<li>
+<p><strong>Pembuatan Dashboard/Reporting:</strong> Memahami prinsip dasar penyajian visualisasi data melalui diagram atau dashboard (Power BI/Tableau) untuk laporan manajemen.</p>
+</li>
+<li>
+<p><strong>Problem Solving &amp; Case Studies (Studi Kasus)</strong></p>
+</li>
+<li><strong>Root Cause Analysis (RCA):</strong> Penggunaan metode seperti <em>5 Whys</em> atau <em>Fishbone Diagram</em> (Ishikawa) saat dihadapkan pada skenario kegagalan sistem.</li>
+<li>
+<p><strong>Prioritisasi Insiden:</strong> Penilaian <em>Impact</em> (dampak bisnis) vs <em>Urgency</em> (urgensi waktu) untuk menentukan matriks prioritas (P1/Critical hingga P4/Low).</p>
+</li>
+<li>
+<p><strong>Business Communication &amp; Stakeholder Engagement</strong></p>
+</li>
+<li>Penerjemahan data teknis menjadi laporan analitis yang dapat dipahami oleh pihak manajemen atau <em>non-technical stakeholders</em>.</li>
+</ol>
+<hr>
+<h3 id="format-umum-penilaian-teknis"><strong>Format Umum Penilaian Teknis</strong></h3>
+<ul>
+<li><strong>Pilihan Ganda / Kuis Konseptual (Online):</strong> Menguji pemahaman teori ITIL, KPI manajemen layanan, dan skenario penanganan insiden.</li>
+<li><strong>Studi Kasus Analisis Data (Excel/Dataset):</strong> Anda diberikan data <em>raw</em> tiket layanan (misal: 500 baris log insiden) dan diminta menghitung metrik utama, menemukan tren penyebab kegagalan terbanyak, serta membuat ringkasan rekomendasi.</li>
+<li><strong>Penulisan Laporan / Dashboard Challenge:</strong> Menyusun <em>Executive Summary</em> singkat berdasarkan data kinerja sistem yang buruk.</li>
+</ul>
+<hr>
+<h3 id="strategi-panduan-persiapan-step-by-step"><strong>Strategi &amp; Panduan Persiapan Step-by-Step</strong></h3>
+<ol>
+<li><strong>Pelajari Ulang Metrik Utama ITSM</strong></li>
+<li>Pastikan Anda tahu cara menghitung:</li>
+<li>$\text{Availability (\%)} = \frac{\text{Total Operating Time} - \text{Downtime}}{\text{Total Operating Time}} \times 100$</li>
+<li>
+<p>$\text{MTTR} = \frac{\text{Total Downtime}}{\text{Jumlah Insiden}}$</p>
+</li>
+<li>
+<p><strong>Kuasai Keterampilan Excel untuk Analisis Data</strong></p>
+</li>
+<li>Berlatih mengelompokkan data tiket berdasarkan kategori insiden, tim penanggung jawab, dan durasi penyelesaian menggunakan Pivot Table.</li>
+<li>
+<p>Gunakan visualisasi sederhana (Bar chart/Line chart) untuk menggambarkan tren bulanan insiden.</p>
+</li>
+<li>
+<p><strong>Gunakan Kerangka Struktural Saat Menjawab Studi Kasus</strong></p>
+</li>
+<li>
+<p>Gunakan pendekatan <strong>STAR</strong> (<em>Situation, Task, Action, Result</em>) untuk soal naratif atau <strong>RCA 5-Whys</strong> saat menganalisis insiden sistem.</p>
+</li>
+<li>
+<p><strong>Fokus pada Dampak Bisnis (Business Impact)</strong></p>
+</li>
+<li>Dalam setiap analisis performa, selalu hubungkan <em>downtime</em> teknis dengan dampaknya pada operasional perusahaan (misal: kerugian finansial, penurunan kepuasan pengguna/CSAT).</li>
+</ol>
+<hr>
+<h2 id="sla-service-level-agreement-ola-operational-level-agreement-dan-uc-underpinning-contract">SLA (Service Level Agreement), OLA (Operational Level Agreement), dan UC (Underpinning Contract)</h2>
+<p>Ketiga istilah ini adalah komponen utama dalam kerangka <strong>ITIL (IT Infrastructure Library)</strong> yang digunakan untuk mengatur komitmen kualitas layanan (<em>Service Level Management</em>).</p>
+<p>Perbedaannya terletak pada <strong>pihak yang terikat</strong> (<em>siapa dengan siapa</em>) dan <strong>sifat hukum/internalnya</strong>.</p>
+<hr>
+<h3 id="tabel-perbedaan-sla-ola-dan-uc"><strong>Tabel Perbedaan SLA, OLA, dan UC</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Fitur</th>
+<th>SLA (<em>Service Level Agreement</em>)</th>
+<th>OLA (<em>Operational Level Agreement</em>)</th>
+<th>UC (<em>Underpinning Contract</em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pihak Terikat</strong></td>
+<td>Penyedia Layanan IT $\leftrightarrow$ <strong>Nasabah/Bisnis</strong> (Eksternal IT)</td>
+<td>Tim IT Internal $\leftrightarrow$ <strong>Tim IT Internal Lainnya</strong></td>
+<td>Penyedia Layanan IT $\leftrightarrow$ <strong>Vendor/Pihak Ketiga</strong></td>
+</tr>
+<tr>
+<td><strong>Sifat Dokumen</strong></td>
+<td>Kesepakatan Tingkat Layanan Bisnis</td>
+<td>Kesepakatan Operasional Internal</td>
+<td>Kontrak Hukum Mengikat (<em>Legal Contract</em>)</td>
+</tr>
+<tr>
+<td><strong>Fokus Utama</strong></td>
+<td>Ekspektasi &amp; performa layanan dari kacamata pengguna/bisnis.</td>
+<td>Ketergantungan antar-tim internal untuk mendukung SLA.</td>
+<td>Komitmen spesifik vendor pendukung (hardware, jaringan, dsb).</td>
+</tr>
+<tr>
+<td><strong>Contoh Kasus</strong></td>
+<td>Aplikasi Mobile Banking harus aktif 99.9% dalam sebulan.</td>
+<td>Tim <em>Database Administrator</em> (DBA) wajib menyelesaikan masalah kuota basis data dalam <strong>30 menit</strong> jika diminta Tim <em>Application Support</em>.</td>
+<td>Vendor <em>Data Center</em> menjamin ketersediaan listrik &amp; pendingin server sebesar 99.99% dengan denda jika melanggar.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="analogi-sederhana-restoran"><strong>Analogi Sederhana: Restoran</strong></h3>
+<p>Bayangkan sebuah <strong>Restoran</strong>:</p>
+<ol>
+<li><strong>SLA (Restoran $\leftrightarrow$ Pelanggan):</strong>
+Restoran berjanji kepada pelanggan: <em>"Makanan Anda akan disajikan dalam waktu </em><em>15 menit</em><em> setelah dipesan."</em> Jika lewat, pelanggan mendapat kompensasi.</li>
+<li><strong>OLA (Koki $\leftrightarrow$ Pelayan Internal):</strong>
+Agar janji 15 menit ke pelanggan terwujud, tim internal membuat aturan: Koki harus selesai memasak dalam <strong>10 menit</strong>, sehingga Pelayan punya waktu <strong>5 menit</strong> untuk mengantar makanan ke meja.</li>
+<li><strong>UC (Restoran $\leftrightarrow$ Pemasok Daging Eksternal):</strong>
+Restoran memiliki kontrak resmi berbadan hukum dengan pemasok daging: <em>"Pemasok wajib mengantar daging segar setiap jam 6 pagi. Jika terlambat, pemasok dikenakan denda potongan pembayaran."</em></li>
+</ol>
+<hr>
+<h3 id="bagaimana-ketiganya-saling-menopang"><strong>Bagaimana Ketiganya Saling Menopang?</strong></h3>
+<p>Secara hierarki, <strong>OLA dan UC adalah fondasi untuk mencapai SLA</strong>.</p>
+<ul>
+<li>Jika vendor melanggar <strong>UC</strong> (misal: penyedia internet/ISP mati total), maka tim internal akan gagal memenuhi <strong>OLA</strong> mereka.</li>
+<li>Jika <strong>OLA</strong> internal gagal, secara otomatis janji <strong>SLA</strong> kepada pengguna/bisnis akan <em>breach</em> (terlanggar).</li>
+</ul>
+<hr>
+<h2 id="incident-management-problem-management-change-management-dan-request-fulfillment">Incident Management, Problem Management, Change Management, dan Request Fulfillment</h2>
+<p>Cara menangani Incident Management (penanganan cepat), Problem Management (analisis akar masalah/Root Cause Analysis), Change Management, dan Request Fulfillment. </p>
+<p>Keempat proses ini adalah bagian inti dari pengelolaan layanan IT (<em>IT Service Management</em> / ITIL). Cara mudah memahaminya adalah melihat <strong>tujuan utama</strong> dan <strong>alur kerja</strong> dari masing-masing proses.</p>
+<hr>
+<h3 id="incident-management-penanganan-cepat-firefighting"><strong>Incident Management (Penanganan Cepat / <em>Firefighting</em>)</strong></h3>
+<ul>
+<li><strong>Tujuan Utama:</strong> Memulihkan layanan yang terganggu <strong>secepat mungkin</strong> agar dampak ke bisnis minimal (<em>workaround</em> / solusi sementara sangat diperbolehkan).</li>
+<li><strong>Prinsip:</strong> <em>"Yang penting sistem jalan dulu, cari tahu penyebabnya nanti."</em></li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Terjadi Gangguan] ➔ [Pencatatan &amp; Prioritisasi] ➔ [Diagnosa Sederhana] ➔ [Solusi Sementara (Workaround)] ➔ [Layanan Pulih/Tutup Tiket]
+</span></code></pre></div>
+<p><strong>Langkah Penanganan:</strong></p>
+<ol>
+<li><strong>Pencatatan (<em>Logging</em>):</strong> Catat tiket insiden beserta detail gejalanya.</li>
+<li><strong>Kategorisasi &amp; Prioritisasi:</strong> Tentukan prioritas berdasarkan <strong>Impact</strong> (berapa banyak pengguna/sistem yang berdampak) dan <strong>Urgency</strong> (seberapa mendesak).</li>
+<li><strong>Penerapan <em>Workaround</em> (Solusi Sementara):</strong></li>
+<li><em>Contoh:</em> Server aplikasi kehabisan memori (<em>hang</em>).</li>
+<li>
+<p><em>Tindakan cepat:</em> Lakukan <em>restart</em> server agar aplikasi bisa dipakai kembali dalam 5 menit, meskipun kita belum tahu kenapa memorinya bisa penuh.</p>
+</li>
+<li>
+<p><strong>Eskalasi:</strong> Jika Tim Level 1 (<em>Helpdesk</em>) tidak bisa menyelesaikan dalam durasi target SLA, langsung salurkan ke Tim Level 2 (<em>Infrastructure/App Support</em>).</p>
+</li>
+</ol>
+<hr>
+<h3 id="problem-management-analisis-akar-masalah-rca"><strong>Problem Management (Analisis Akar Masalah / RCA)</strong></h3>
+<ul>
+<li><strong>Tujuan Utama:</strong> Mengidentifikasi <strong>akar penyebab</strong> (<em>root cause</em>) dari insiden yang berulang atau insiden besar (<em>Major Incident</em>), serta mencegah insiden serupa terjadi kembali di masa depan.</li>
+<li><strong>Prinsip:</strong> <em>"Cari tahu kenapa bisa rusak, lalu perbaiki secara permanen."</em></li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Identifikasi Tren Insiden] ➔ [Analisis Akar Masalah (RCA)] ➔ [Identifikasi Solusi Permanen] ➔ [Pengajuan Change Request (RFC)]
+</span></code></pre></div>
+<p><strong>Langkah Penanganan:</strong></p>
+<ol>
+<li><strong>Analisis Tren / Pemicu:</strong> Mengumpulkan tiket insiden yang jalurnya sama (misal: server aplikasi <em>hang</em> 3 kali dalam seminggu).</li>
+<li><strong>Root Cause Analysis (RCA):</strong> Gunakan metode seperti <strong>5 Whys</strong> atau <strong>Fishbone Diagram</strong> untuk melacak hingga ke sumber masalah.</li>
+<li>
+<p><em>Hasil analisis dari contoh di atas:</em> Server <em>hang</em> ternyata disebabkan oleh <em>memory leak</em> pada kodingan aplikasi versi terbaru.</p>
+</li>
+<li>
+<p><strong>Dokumentasi <em>Known Error</em>:</strong> Catat masalah dan solusi sementaranya dalam Basis Pengetahuan (<em>Knowledge Base</em>).</p>
+</li>
+<li><strong>Buat Usulan Perbaikan Permanen:</strong> Mengajukan permintaan perubahan sistem (<em>Request for Change</em>) ke tim pengembang untuk memperbaiki <em>bug</em> kodingan tersebut.</li>
+</ol>
+<hr>
+<h3 id="change-management-pengelolaan-perubahan"><strong>Change Management (Pengelolaan Perubahan)</strong></h3>
+<ul>
+<li><strong>Tujuan Utama:</strong> Memastikan setiap perubahan pada sistem IT (seperti <em>update</em> aplikasi, ganti server, atau ubah konfigurasi) dilakukan secara terstruktur <strong>tanpa menyebabkan gangguan/downtime baru</strong>.</li>
+<li><strong>Prinsip:</strong> <em>"Uji coba dulu, minta persetujuan, dan siapkan rencana pembatalan (rollback)."</em></li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Pengajuan Perubahan (RFC)] ➔ [Evaluasi Risiko] ➔ [Persetujuan (CAB)] ➔ [Implementasi &amp; Pengujian] ➔ [Review Pasca-Perubahan]
+</span></code></pre></div>
+<p><strong>Langkah Penanganan:</strong></p>
+<ol>
+<li><strong>Pengajuan <em>Request for Change</em> (RFC):</strong> Tim teknis mengajukan dokumen rencana perubahan.</li>
+<li><strong>Analisis Dampak &amp; Risiko:</strong> Menilai dampak perubahan, waktu eksekusi (biasanya di <em>non-business hours</em>), dan menyiapkan <strong>Rollback Plan</strong> (langkah mengembalikan sistem ke kondisi semula jika <em>update</em> gagal).</li>
+<li><strong>Persetujuan oleh CAB (<em>Change Advisory Board</em>):</strong> Tim manajemen dan perwakilan bisnis meninjau apakah perubahan tersebut aman untuk diimplementasikan.</li>
+<li><strong>Implementasi &amp; Tinjauan:</strong> Eksekusi perubahan, lakukan pengujian, dan tutup RFC jika sukses.</li>
+</ol>
+<hr>
+<h3 id="request-fulfillment-pemenuhan-permintaan-standar"><strong>Request Fulfillment (Pemenuhan Permintaan Standar)</strong></h3>
+<ul>
+<li><strong>Tujuan Utama:</strong> Menangani <strong>permintaan rutin</strong> dari pengguna yang <em>bukan merupakan gangguan atau sistem rusak</em>.</li>
+<li><strong>Prinsip:</strong> <em>"Layanan standar, risikonya rendah, dan memiliki prosedur yang sudah jelas."</em></li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[Pengguna Minta Akses/Barang] ➔ [Verifikasi &amp; Persetujuan Atasan] ➔ [Eksekusi Otomatis/Manual] ➔ [Konfirmasi ke Pengguna]
+</span></code></pre></div>
+<p><strong>Contoh &amp; Langkah Penanganan:</strong></p>
+<ul>
+<li><strong>Contoh Kasus:</strong> Karyawan baru minta akun email, permintaan ganti kata sandi (<em>reset password</em>), atau permintaan laptop baru.</li>
+<li><strong>Langkah:</strong></li>
+<li>Pengguna memilih menu permintaan di portal mandiri (<em>Self-Service Portal</em>).</li>
+<li>Sistem mengirimkan alur persetujuan (<em>approval</em>) otomatis ke atasan pengguna.</li>
+<li>Setelah disetujui, tim IT (atau sistem otomatis) membuatkan akun/menyerahkan perangkat.</li>
+<li>Tiket ditutup.</li>
+</ul>
+<hr>
+<h3 id="rangkuman-perbandingan-singkat"><strong>Rangkuman Perbandingan Singkat</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Proses</th>
+<th>Pemicu / Trigger</th>
+<th>Pertanyaan Utama</th>
+<th>Contoh Skenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Management</strong></td>
+<td>Sistem mati / Error</td>
+<td><em>"Bagaimana cara menyalakannya kembali dengan cepat?"</em></td>
+<td>Printer kantor tidak bisa mencetak dokumen penting.</td>
+</tr>
+<tr>
+<td><strong>Problem Management</strong></td>
+<td>Insiden berulang</td>
+<td><em>"Mengapa printer ini terus-menerus mati setiap jam 2 siang?"</em></td>
+<td>Ditemukan kabel listrik printer mengelupas dan menyebabkan korsleting berkala.</td>
+</tr>
+<tr>
+<td><strong>Change Management</strong></td>
+<td>Rencana perbaikan/upgrade</td>
+<td><em>"Apakah aman jika kita mengganti seluruh sistem printer minggu depan?"</em></td>
+<td>Mengganti seluruh unit printer tua dengan model baru yang hemat energi.</td>
+</tr>
+<tr>
+<td><strong>Request Fulfillment</strong></td>
+<td>Permintaan pengguna</td>
+<td><em>"Tolong berikan saya akses ke printer lantai 3."</em></td>
+<td>Karyawan baru meminta hak akses mencetak di area kerjanya.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mttr-mtbf-fcr-dan-service-availability">MTTR, MTBF, FCR, dan Service Availability (%)</h2>
+<p>Indikator kinerja seperti MTTR (Mean Time to Repair), MTBF (Mean Time Between Failures), First Contact Resolution (FCR), dan Service Availability. Keempat metrik ini saling terhubung secara matematika dan operasional untuk mengukur <strong>kesehatan, keandalan, dan efisiensi layanan IT</strong>.</p>
+<hr>
+<h3 id="matriks-pengertian-fokus-metrik"><strong>Matriks Pengertian &amp; Fokus Metrik</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Definisi Singkat</th>
+<th>Jenis Indikator</th>
+<th>Arah Ideal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MTTR</strong> (<em>Mean Time to Repair</em>)</td>
+<td>Rata-rata waktu yang dibutuhkan untuk <strong>memperbaiki</strong> sistem dari saat rusak hingga kembali normal.</td>
+<td>Efisiensi Pemulihan</td>
+<td><strong>Semakin Rendah</strong> ($\downarrow$)</td>
+</tr>
+<tr>
+<td><strong>MTBF</strong> (<em>Mean Time Between Failures</em>)</td>
+<td>Rata-rata jarak waktu operasi normal <strong>di antara dua kegagalan</strong> (mengukur ketahanan sistem).</td>
+<td>Keandalan (<em>Reliability</em>)</td>
+<td><strong>Semakin Tinggi</strong> ($\uparrow$)</td>
+</tr>
+<tr>
+<td><strong>FCR</strong> (<em>First Contact Resolution</em>)</td>
+<td>Persentase insiden yang berhasil diselesaikan pada <strong>kontak pertama</strong> tanpa perlu disalurkan (<em>escalate</em>).</td>
+<td>Efisiensi <em>Helpdesk</em> / L1</td>
+<td><strong>Semakin Tinggi</strong> ($\uparrow$)</td>
+</tr>
+<tr>
+<td><strong>Service Availability (%)</strong></td>
+<td>Persentase total waktu sistem dapat <strong>beroperasi normal</strong> dan diakses oleh pengguna.</td>
+<td>Hasil Akhir Bisnis</td>
+<td><strong>Mendekati 100%</strong> ($\uparrow$)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="peta-korelasi-antar-indikator"><strong>Peta Korelasi Antar-Indikator</strong></h3>
+<h4 id="a-hubungan-matematika-mttr-mtbf-service-availability"><strong>A. Hubungan Matematika: MTTR + MTBF -&gt; Service Availability (%)</strong></h4>
+<p>Secara teknis, ketersediaan layanan (<em>Availability</em>) adalah hasil kalkulasi langsung dari ketahanan sistem (MTBF) dan kecepatan pemulihan (MTTR):</p>
+<p>$$\text{Service Availability (\%)} = \left( \frac{\text{MTBF}}{\text{MTBF} + \text{MTTR}} \right) \times 100\%$$</p>
+<ul>
+<li><strong>Skenario 1:</strong> Jika sistem jarang rusak (<strong>MTBF tinggi</strong>), namun saat rusak butuh waktu sangat lama untuk perbaikan (<strong>MTTR tinggi</strong>), nilai <em>Availability</em> akan turun drastis.</li>
+<li><strong>Skenario 2:</strong> Jika sistem sering rusak (<strong>MTBF rendah</strong>), tetapi tim IT bisa memulihkannya dalam hitungan detik (<strong>MTTR sangat rendah</strong>), nilai <em>Availability</em> dapat tetap terjaga tinggi.</li>
+</ul>
+<h4 id="b-hubungan-operasional-fcr-mttr"><strong>B. Hubungan Operasional: FCR -&gt; MTTR</strong></h4>
+<ul>
+<li><strong>Korelasi Positif:</strong> Ketika tingkat <strong>FCR tinggi</strong>, artinya tim <em>Helpdesk</em> (Level 1) mampu menyelesaikan sebagian besar insiden ringan secara langsung di awal.</li>
+<li><strong>Dampak ke MTTR:</strong> Tiket insiden tidak perlu ditumpuk atau dilempar-lempar antar-tim teknis (L2/L3), sehingga total waktu pemulihan insiden rata-rata (<strong>MTTR</strong>) otomatis menjadi jauh <strong>lebih cepat / rendah</strong>.</li>
+</ul>
+<hr>
+<h3 id="efek-domino-dalam-manajemen-layanan-it"><strong>Efek Domino dalam Manajemen Layanan IT</strong></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[FCR Tinggi] 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   ↓ (Tiket selesai cepat di kontak pertama)
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[MTTR Rendah] 
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   ↓ (Total durasi downtime berkurang)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[Service Availability Tinggi] 
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>   ↑ (Didukung oleh MTBF yang tinggi / sistem jarang rusak)
+</span></code></pre></div>
+<ol>
+<li><strong>Peningkatan FCR</strong> memangkas penundaan penanganan -&gt; <strong>Menurunkan MTTR</strong>.</li>
+<li><strong>Penurunan MTTR</strong> ditambah <strong>MTBF yang tinggi</strong> (sistem stabil) -&gt; <strong>Memaksimalkan Service Availability</strong>.</li>
+<li><strong>Hasil Akhir:</strong> Biaya operasional IT menurun, kepuasan pengguna (<em>CSAT</em>) meningkat, dan target SLA perusahaan tercapai.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../gamedesign/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Game Design">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Game Design
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../supplychain/" class="md-footer__link md-footer__link--next" aria-label="Next: Jangan Cuma Excel">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Jangan Cuma Excel
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Samuel P.M.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://youtube.com/@" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
